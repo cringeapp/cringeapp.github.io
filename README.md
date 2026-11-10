@@ -9,7 +9,7 @@ The public website for the **cringe.** app: home page, privacy policy, terms of 
 | Terms of Service | `terms.html` |
 | Delete your account | `delete-account.html` |
 
-Live at: https://sanithakj1975.github.io/cringe-site/
+Live at: https://cringeapp.github.io/ (repo: `cringeapp/cringeapp.github.io`)
 
 ## Editing
 
