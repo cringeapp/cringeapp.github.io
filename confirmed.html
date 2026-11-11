@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email confirmed · cringe.</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><img src="icon.png" alt=""><span>cringe.</span></a>
+  <nav class="links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="delete-account.html">Delete account</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <img src="icon.png" alt="">
+
+    <!-- Shown when the link worked (default) -->
+    <div id="ok">
+      <h1 style="font-size:clamp(36px,7vw,52px)">Email confirmed 🎉</h1>
+      <p class="tagline">you’re all set</p>
+      <div class="card" style="text-align:left;max-width:520px;margin:0 auto">
+        <ol style="margin:0">
+          <li>Go back to the <b>cringe.</b> app on your phone.</li>
+          <li>Log in with the email and password you just signed up with.</li>
+          <li>Create your space, or join your partner with their invite code. 💞</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Shown when Supabase reports a problem (expired or already-used link) -->
+    <div id="err" hidden>
+      <h1 style="font-size:clamp(36px,7vw,52px)">Hmm, that link didn’t work</h1>
+      <p class="tagline" id="err-msg">it may have expired or already been used</p>
+      <div class="card" style="text-align:left;max-width:520px;margin:0 auto">
+        <ul style="margin:0">
+          <li>If you already confirmed, just <b>open cringe. and log in</b>.</li>
+          <li>Otherwise, sign up again in the app to get a fresh link (links expire after a while).</li>
+          <li>Still stuck? Email <a href="mailto:cringe.app.support@gmail.com">cringe.app.support@gmail.com</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  © 2026 cringe. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="delete-account.html">Delete account</a> · <a href="mailto:cringe.app.support@gmail.com">cringe.app.support@gmail.com</a>
+</footer>
+<script>
+  // Supabase sends people here after the confirmation link. On failure it adds
+  // #error=...&error_description=... (or ?error=...). On success the address can
+  // also carry login tokens in the "#..." part: we never read or store them, we
+  // just remove them from the address bar so they don't linger in history.
+  (function () {
+    var params = new URLSearchParams((location.hash || '').replace(/^#/, '') + '&' + location.search.replace(/^\?/, ''));
+    var error = params.get('error') || params.get('error_code');
+    if (error) {
+      document.getElementById('ok').hidden = true;
+      document.getElementById('err').hidden = false;
+      var desc = params.get('error_description');
+      if (desc) document.getElementById('err-msg').textContent = desc.replace(/\+/g, ' ').toLowerCase();
+    }
+    if (location.hash || location.search) history.replaceState(null, '', location.pathname);
+  })();
+</script>
+</body>
+</html>
