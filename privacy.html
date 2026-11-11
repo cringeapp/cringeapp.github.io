@@ -46,12 +46,34 @@
 <h2>Service providers</h2>
 <p>We use these providers to run the app. They process data only on our behalf:</p>
 <ul>
-<li><b>Supabase</b>: database, file storage and sign-in.</li>
+<li><b>Supabase</b>: database and sign-in.</li>
+<li><b>Cloudflare (R2)</b>: storing photos, doodles and profile pictures.</li>
 <li><b>Expo (650 Industries)</b>: delivering push notifications.</li>
 <li><b>Google Firebase Cloud Messaging</b>: delivering push notifications on Android.</li>
 <li><b>Our email provider</b>: sending account emails such as sign-up confirmation.</li>
 </ul>
 <p>We do not sell or share your personal data with anyone else.</p>
+
+<h2>Phone permissions</h2>
+<p>cringe. only asks for a permission when you use the feature that needs it. You can turn any of them off in your phone’s settings.</p>
+<div class="table-wrap"><table>
+<tr><th>Permission</th><th>Used for</th><th>If you say no</th></tr>
+<tr><td><b>Camera</b></td><td>Taking a love snap or profile photo</td><td>You can still pick photos from your gallery</td></tr>
+<tr><td><b>Photos / gallery</b></td><td>Choosing a snap, doodle background or profile photo</td><td>You can still use the camera</td></tr>
+<tr><td><b>Notifications</b></td><td>Partner activity, daily reminder, date countdowns</td><td>No notifications; the app works normally</td></tr>
+<tr><td><b>Location (approximate)</b></td><td>Showing the distance between you and your partner</td><td>Distance isn’t shown</td></tr>
+<tr><td><b>Fingerprint / face / PIN</b></td><td>App lock (optional)</td><td>App lock stays off</td></tr>
+</table></div>
+<p><b>Fingerprint and face data never leave your phone.</b> Your phone checks them itself and only tells cringe. “yes” or “no”. We never receive or store them.</p>
+
+<h2>Data stored on your phone</h2>
+<p>To work smoothly, the app keeps a few things on your phone:</p>
+<ul>
+<li>your <b>login session</b>, encrypted, with its key kept in your phone’s secure keystore;</li>
+<li>your settings: theme, app lock, notification preferences;</li>
+<li><b>copies of photos and doodles</b> you’ve viewed, so they load quickly without downloading again.</li>
+</ul>
+<p>These stay on your phone only. They are removed when you uninstall the app, and the saved photos are also cleared when you unpair or delete your account.</p>
 
 <h2>Security</h2>
 <ul>
@@ -64,9 +86,27 @@
 <ul>
 <li><b>Unpair</b> (Settings → Danger zone) ends your shared space and permanently deletes all its notes, snaps, doodles, dates and streak for both partners.</li>
 <li><b>Delete my account</b> (Settings → Danger zone) permanently deletes your account, your profile and your shared space.</li>
-<li>Records are deleted immediately. After deletion, photo and doodle files can no longer be opened through the app. To have the files themselves removed from storage too, or if you can't access the app, see <a href="delete-account.html">Delete your account</a>. We complete requests within 30 days.</li>
+<li>Deletion is immediate and covers everything, <b>including the photo, doodle and profile picture files</b> in storage.</li>
+<li><b>Backups:</b> we currently don’t keep backups of your data, so deleted data is gone for good. If we add backups in future, deleted data would remain in them for at most 7 days and would never be restored into the app.</li>
+<li>Can't access the app? See <a href="delete-account.html">Delete your account</a>. We complete email requests within 30 days.</li>
 <li>You can turn off location sharing and notifications at any time in Settings.</li>
 </ul>
+
+<h2>Where cringe. is available</h2>
+<p>cringe. is offered to people in <b>India</b>, and this policy is written for the Digital Personal Data Protection Act, 2023 (DPDP Act). We are the <b>Data Fiduciary</b> for your personal data. Our service providers (listed above) are Data Processors that act only on our instructions; some of them may store or process data on servers outside India, with security protections in place.</p>
+
+<h2>Your rights in India (DPDP Act, 2023)</h2>
+<ul>
+<li><b>Consent.</b> We process your data with your consent, given when you create an account and agree to this policy. Optional features (location sharing, notifications) ask for consent separately and can be switched off anytime in Settings.</li>
+<li><b>Withdraw consent.</b> You can withdraw consent as easily as you gave it: turn off a feature in Settings, or delete your account. Withdrawing doesn’t affect processing already done before it.</li>
+<li><b>Access.</b> Ask us for a summary of the personal data we hold about you and how we use it.</li>
+<li><b>Correction and updating.</b> Edit your name, photo and dates in the app, or ask us to correct anything else.</li>
+<li><b>Erasure.</b> Delete your account in the app (Settings → Danger zone), or <a href="delete-account.html">ask us by email</a>.</li>
+<li><b>Nominate someone.</b> You can name a person to exercise these rights for you if you die or can’t act yourself. Email us their name and how to contact them.</li>
+<li><b>Grievances.</b> Contact our grievance contact at <a href="mailto:cringe.app.support@gmail.com?subject=Privacy%20grievance">cringe.app.support@gmail.com</a>. We will acknowledge within 7 days and resolve within 30 days. If you’re not satisfied, you can complain to the <b>Data Protection Board of India</b>.</li>
+</ul>
+<p><b>Data breaches.</b> If a personal data breach affects you, we will tell you and the Data Protection Board of India as the law requires.</p>
+<p><b>How long we keep data.</b> We keep your data while your account is active. When you unpair or delete your account, we delete the related data immediately, including stored photos. Short-lived technical logs kept by our providers expire on their own.</p>
 
 <h2>Children</h2>
 <p>cringe. is intended for adults (18+). We do not knowingly collect data from children. If you believe a child has created an account, email us and we will delete it.</p>
